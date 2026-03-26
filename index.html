@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#">Portfolio</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-heading">
+        <div class="hero__media">
+          <picture>
+            <img
+              class="hero__photo"
+              src="assets/profile.jpg"
+              alt="Portrait"
+              width="480"
+              height="480"
+              onerror="this.onerror=null;this.classList.add('hero__photo--fallback');this.removeAttribute('src');this.alt=''"
+            />
+          </picture>
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Hello — I’m</p>
+          <h1 id="hero-heading" class="hero__name">Your Name</h1>
+          <p class="hero__role">Your title or one-line pitch</p>
+          <div class="hero__bio">
+            <p>
+              Replace this with a short bio: what you do, what you care about,
+              and the kind of work you want to be known for. Keep it friendly
+              and specific — two or three sentences is enough.
+            </p>
+          </div>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#work">View work</a>
+            <a class="button button--ghost" href="mailto:you@example.com">Email</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--work" id="work" aria-labelledby="work-heading">
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="work-heading" class="section__title">Selected work</h2>
+            <p class="section__lede">
+              Videos autoplay (muted) when they scroll into view. Unmute for
+              sound. Add entries to the <code>videos</code> array in
+              <code>js/main.js</code>.
+            </p>
+          </header>
+          <div class="video-stack" id="video-stack"></div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="skills-heading" class="section__title">Skills</h2>
+          </header>
+          <ul class="pill-list" id="skills-list"></ul>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="education" aria-labelledby="edu-heading">
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="edu-heading" class="section__title">Education</h2>
+          </header>
+          <ol class="timeline" id="education-list"></ol>
+        </div>
+      </section>
+
+      <section class="section" id="achievements" aria-labelledby="ach-heading">
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="ach-heading" class="section__title">Achievements</h2>
+          </header>
+          <ul class="achievements" id="achievements-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> · Built for GitHub Pages</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
