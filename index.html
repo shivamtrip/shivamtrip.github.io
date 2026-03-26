@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Shivam Tripathy · Robotics Software Engineer</title>
+    <meta
+      name="description"
+      content="Robotics software engineer — autonomy, perception, and control for UAVs, mobile manipulators, and humanoids. CMU MRSD."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,12 +18,19 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="logo" href="#">Portfolio</a>
+      <a class="logo" href="#top">Shivam Tripathy</a>
       <nav class="nav" aria-label="Primary">
-        <a href="#work">Work</a>
+        <a href="#work">Experience</a>
+        <a href="#other-highlights">Other</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#achievements">Achievements</a>
+        <a
+          href="assets/ShivamTripathy_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Resume</a
+        >
       </nav>
     </header>
 
@@ -29,8 +40,8 @@
           <picture>
             <img
               class="hero__photo"
-              src="assets/profile.jpg"
-              alt="Portrait"
+              src="assets/logos/Profile_ShivamTripathy.jpg"
+              alt="Portrait of Shivam Tripathy"
               width="480"
               height="480"
               onerror="this.onerror=null;this.classList.add('hero__photo--fallback');this.removeAttribute('src');this.alt=''"
@@ -39,42 +50,38 @@
         </div>
         <div class="hero__content">
           <p class="hero__eyebrow">Hello — I’m</p>
-          <h1 id="hero-heading" class="hero__name">Your Name</h1>
-          <p class="hero__role">Your title or one-line pitch</p>
+          <h1 id="hero-heading" class="hero__name">Shivam Tripathy</h1>
+          <p class="hero__role">Robotics Software Engineer</p>
           <div class="hero__bio">
             <p>
-              Replace this with a short bio: what you do, what you care about,
-              and the kind of work you want to be known for. Keep it friendly
-              and specific — two or three sentences is enough.
+              I build and deploy real-world robotic systems: autonomy, perception,
+              and control for UAVs, humanoids, and mobile manipulators. My
+              background spans SLAM and state estimation, motion planning,
+              learning-based control, and LLM-linked task planning — from defense
+              and aerial platforms to assistive care robots in the field.
             </p>
           </div>
           <div class="hero__actions">
-            <a class="button button--primary" href="#work">View work</a>
-            <a class="button button--ghost" href="mailto:you@example.com">Email</a>
+            <a
+              class="button button--ghost"
+              href="mailto:shivamtrip99@gmail.com"
+              >Email</a
+            >
+            <a
+              class="button button--ghost"
+              href="https://www.linkedin.com/in/shivamtripathy"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              class="button button--ghost"
+              href="https://github.com/shivamtrip"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
           </div>
-        </div>
-      </section>
-
-      <section class="section section--work" id="work" aria-labelledby="work-heading">
-        <div class="section__inner">
-          <header class="section__header">
-            <h2 id="work-heading" class="section__title">Selected work</h2>
-            <p class="section__lede">
-              Videos autoplay (muted) when they scroll into view. Unmute for
-              sound. Add entries to the <code>videos</code> array in
-              <code>js/main.js</code>.
-            </p>
-          </header>
-          <div class="video-stack" id="video-stack"></div>
-        </div>
-      </section>
-
-      <section class="section" id="skills" aria-labelledby="skills-heading">
-        <div class="section__inner">
-          <header class="section__header">
-            <h2 id="skills-heading" class="section__title">Skills</h2>
-          </header>
-          <ul class="pill-list" id="skills-list"></ul>
         </div>
       </section>
 
@@ -87,6 +94,45 @@
         </div>
       </section>
 
+      <section class="section section--work" id="work" aria-labelledby="work-heading">
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="work-heading" class="section__title">Work Highlights</h2>
+            <p class="section__lede">
+              I was the sole / major contributor to the projects below.
+            </p>
+          </header>
+          <div class="video-stack" id="video-stack"></div>
+        </div>
+      </section>
+
+      <section
+        class="section section--alt"
+        id="other-highlights"
+        aria-labelledby="other-highlights-heading"
+      >
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="other-highlights-heading" class="section__title">
+              Other Highlights
+            </h2>
+            <p class="section__lede">
+              Earlier internships and standalone projects — quick context on each.
+            </p>
+          </header>
+          <div class="highlights-split">
+            <div class="highlights-subsection">
+              <h3 class="highlights-subsection__title">Internships</h3>
+              <ul class="highlight-cards" id="internships-list"></ul>
+            </div>
+            <div class="highlights-subsection">
+              <h3 class="highlights-subsection__title">Projects</h3>
+              <ul class="highlight-cards" id="projects-list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="achievements" aria-labelledby="ach-heading">
         <div class="section__inner">
           <header class="section__header">
@@ -95,10 +141,23 @@
           <ul class="achievements" id="achievements-list"></ul>
         </div>
       </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="skills-heading" class="section__title">Technical skills</h2>
+          </header>
+          <ul class="pill-list" id="skills-list"></ul>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> · Built for GitHub Pages</p>
+      <p>
+        © <span id="year"></span> Shivam Tripathy ·
+        <a href="https://www.linkedin.com/in/shivamtripathy">LinkedIn</a> ·
+        <a href="https://github.com/shivamtrip">GitHub</a>
+      </p>
     </footer>
 
     <script src="js/main.js"></script>
