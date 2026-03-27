@@ -21,10 +21,14 @@ const SITE = {
     {
       org: "Carnegie Mellon University — The Robotics Institute",
       meta: "M.S. Robotic Systems Development · May 2024 · Pittsburgh, PA · GPA 3.87/4.0",
-      detail:
-        "Swartz Entrepreneurial Fellow (2022) · TA: Systems Engineering for Robotics (2024). Coursework: ML, Robot Planning, Computer Vision, Robot Learning, Visual Learning, SLAM.",
       cmuSpeech: {
-        label: "Selected as Student Commencement Speaker for CMU Computer Science (2024)",
+        label: "Selected as Student Commencement Speaker for CMU, School of Computer Science (2024)",
+        professorQuote: {
+          text:
+            "Shivam was selected among a number of nominations across programs. He is an excellent example of what we are looking for in our Master’s students.",
+          attribution:
+            "Professor David Garlan (Associate Dean, School of Computer Science), at 0:41 of the video below",
+        },
         videoId: "U2N0dtrmfD4",
         startSeconds: 63,
       },
@@ -68,8 +72,9 @@ const SITE = {
     },
   ],
   /**
-   * Each group = one employer or highlight. Use clips[] OR clipGroups[{ heading, description?, descriptionLink?, clips }].
-   * Optional description = short blurb under that subheading (purpose/context). Supports \n for line breaks.
+   * Each group = one employer or highlight. Use clips[] OR clipGroups[{ heading, description?, descriptionToggleLabel?, descriptionLink?, clips }].
+   * Optional description = blurb in a collapsible block (closed by default). Supports \n for line breaks; **segments** render bold.
+   * Optional descriptionToggleLabel = summary line for that block (default: "Context & role").
    * Optional descriptionLink = { url, text?, lead? } appends a trailing external link (lead = text before the anchor).
    * Per-clip: youtube URL/ID; title optional; description optional (captions under a group heading).
    */
@@ -82,12 +87,13 @@ const SITE = {
       logoAlt: "Apellix",
       companyUrl: "https://apellix.com",
       summary:
-        "1 of 3 engineers in a 10-member drone company (rest business and operations), building autonomous power-wash and spray-painting UAVs — commercial and US Army deployments in 20+ countries. Worked on Visual localization / SLAM in GPS-denied flight, flight software stack, and Ground Control Station product features.",
+        "Developing autonomous **power-wash** and **spray-painting drones** deployed commercially and for the US Army. \n **Focus:** visual localization/SLAM, flight software, and ground control software.",
       clipGroups: [
         {
-          heading: "Project 1: Autonomous decontamination of military vehicles",
+          heading: "Project 1: Autonomous decontamination of military vehicles (Aug 2025 - Present)",
+          descriptionToggleLabel: "Program context & my role",
           description:
-            "This work is a part of an ongoing contract between Apellix and the US Army to develop autonomous decontamination drones. The drones autonomously detect a target vehicle, navigate to it, create a spray plan and spray a decontaminant agent on the drones, to eliminate any CBRN (Chemical, Biological, Radiological, Nuclear) hazards that occur on the battlefield.",
+            "This work is a part of an ongoing contract between Apellix and the US Army to develop autonomous decontamination drones. The drones autonomously detect a target vehicle, navigate to it, create a spray plan and spray a decontaminant agent on the target vehicle, to eliminate it from any CBRN (Chemical, Biological, Radiological, Nuclear) hazards that occur on the battlefield. \n \n **My Role:** System design, software architecture and software development across perception, planning, SLAM, flight software, system testing and more! ",
           clips: [
             {
               youtube: "https://youtu.be/5MbsL5zI-1M",
@@ -104,9 +110,9 @@ const SITE = {
           ],
         },
         {
-          heading: "Project 2: GPS-denied navigation using visual-inertial odometry",
+          heading: "Project 2: GPS-denied navigation using visual-inertial odometry (Sept 2024 - March 2025)",
           description:
-            "This project extends our work with the US Army to enable GPS-denied navigation. We integrated VIO, SLAM and target detection capabilities to enable an Apellix drone to scan for a target vehicle, revolve around it and position itself behind the vehicle, ready to start a cleaning mission.",
+            "This project extends our work with the US Army to enable GPS-denied navigation. We integrated VIO, SLAM and target detection capabilities to enable an Apellix drone to scan for a target vehicle, revolve around it and position itself behind the vehicle, ready to start a cleaning mission. \n \n  **My Role:** System design, software architecture and software development across perception, planning, VIO + SLAM, flight software, system testing and more! ",
           clips: [
             {
               youtube: "https://youtu.be/hFxdq0E6bMg",
@@ -123,14 +129,9 @@ const SITE = {
           ],
         },
         {
-          heading: "Spray Painting & Power Washing Drones",
+          heading: "Spray Painting & Power Washing Drones (June 2024 - Present)",
           description:
-            "Industrial spray painting and pressure washing drones designed and manufactured in Jacksonville, FL. Commercial drones operating in 20+ countries.",
-          descriptionLink: {
-            lead: " More info — ",
-            url: "https://apellix.com",
-            text: "apellix.com",
-          },
+            "Industrial spray painting and pressure washing drones designed and manufactured in Jacksonville, FL. Commercial drones operating in 20+ countries. \n \n **My Role:** Responsible for all aspects of software development & system design, from flight control stack to ground-control app and more.",
           clips: [
             {
               youtube: "https://youtube.com/shorts/v-rld8KODUc?si=prq5Otw-d8eXHueU",
@@ -138,19 +139,22 @@ const SITE = {
             },
             {
               youtube: "https://youtube.com/shorts/4xjOmPAK4Zc?si=HDwP_jajW7zy3mjf",
-              description: "Testing at our in-house facility in Jacksonville, FL",
+              description: "Spray-painting drone test at our in-house facility in Jacksonville, FL",
             },
             {
-              youtube: "https://youtube.com/shorts/_cBYUEBe5VM?si=R_W5aKDoRou5TMwX",
-              description: "More testing at Jacksonville, FL",
+              youtube: "https://youtu.be/_lsKcIl_G7E?si=Zo3X-vYwdFoCpY1U",
+              description: "Power washing a building with an Apellix drone",
             },
-
+            {
+              youtube: "https://youtube.com/shorts/mMnBETybUbs?si=3XQxu51kSi0kVIQ7",
+              description: "Power washing a water tower with an Apellix drone",
+            },
           ],
         },
         {
-          heading: "Apellix Intelligence (AI) - Autonomous Drone Cleaning",
+          heading: "Apellix Intelligence (AI) - Autonomous Drone Cleaning (Nov 2025 - Feb 2026)",
           description:
-            "Product-focused autonomous cleaning: the drone plans coverage and executes washing on vertical or hard-to-reach surfaces with minimal manual stick time.",
+            "Autonomous cleaning for everyone: Draw-a-box and watch the drone autonomously clean that area for you. \n \n **My Role:** Created this concept leveraging my autonomy experience from US Army projects. Immediate demand from our customers for this feature. Opened a new SaaS-based revenue stream for Apellix.",
           clips: [
             {
               youtube: "https://youtu.be/nZRy5b-qqSc?si=Oun14xAvIXUPpHgk",
@@ -171,7 +175,7 @@ const SITE = {
       dates: "Sep 2022 – Dec 2023",
       logoAlt: "Carnegie Mellon University",
       summary:
-        "Autonomous object fetch-and-retrieval for an assistive mobile manipulator (SLAM with LiDAR + stereo + IMU, A*/DWA path planning, 3D obstacle avoidance). Cloud LLM agent linking natural language to HRI, navigation, and manipulation — deployed in a Pittsburgh care facility.\n\nUse case: a user asks Alfred (the Stretch RE1) by voice to bring an object. Alfred interprets the request, plans a route to the object's area, and drives there. It then searches for the object, lines up to grasp it, plans and executes the arm motion to pick it up, and returns to the user with the item.",
+        "Autonomous object fetch-and-retrieval for an assistive mobile manipulator (Perception, Planning, Navigation, Manipulation). Cloud LLM agent linking natural language to HRI, navigation, and manipulation — deployed in a Pittsburgh care facility. \n\n **Use Case:** A user asks Alfred (the Stretch RE1 robot) by voice to bring an object. Alfred interprets the request, plans a route to the object's area, and drives there. It then searches for the object, lines up to grasp it, plans and executes the arm motion to pick it up, and returns to the user with the item.",
       relatedEmbed: {
         url: "https://www.cs.cmu.edu/news/2023/care-home-robot",
         title: "CMU Team Explores Future of Caregiving With Assistive Robot",
@@ -179,62 +183,30 @@ const SITE = {
       clips: [
         {
           youtube: "https://youtu.be/Km9_RogBT0A?si=v1B3SXMm8bXKXM04",
-          description: "Assistive robot at CMU — deployment and autonomy (1 of 3).",
+          description: "Assistive robot at AI Makerspace Lab, CMU (Internal testing)",
         },
         {
           youtube: "https://youtu.be/epFzxcuik8c?si=kuqQcMOShwoySZsC",
-          description: "Assistive robot at CMU (2 of 3).",
+          description: "Assistive robot at Vincentian Senior Living, Pittsburgh (deployment)",
         },
         {
           youtube: "https://youtu.be/Q8ZKP0MZZpU?si=ByVSCJcS0ZU-c8So",
-          description: "Assistive robot at CMU (3 of 3).",
+          description: "Assistive robot at Vincentian Senior Living (Demo 2)",
         },
       ],
     },
   ],
   /**
-   * Logo + short narrative. Optional: meta (role · dates), url (external link on title).
+   * summary: **phrase** → bold. relatedEmbed: same shape as showcase (iframe + fallback link).
    */
   otherHighlights: {
-    internships: [
-      {
-        name: "Defence Research and Development Organisation (DRDO)",
-        meta: "Summer internship · robotics / systems",
-        logo: "assets/logos/drdo.svg",
-        logoAlt: "DRDO",
-        description:
-          "Hands-on work with defense R&D teams on experimental systems. Focused on integrating hardware and software for field trials, documentation, and supporting test campaigns alongside scientists and engineers.",
-        url: "https://www.drdo.gov.in/",
-      },
-      {
-        name: "SUN Mobility",
-        meta: "Internship · energy / EV infrastructure",
-        logo: "assets/logos/sun-mobility.svg",
-        logoAlt: "SUN Mobility",
-        description:
-          "Contributed to engineering efforts around battery-swapping and energy solutions for electric fleets. Supported design reviews, prototyping workflows, and cross-functional coordination between mechanical, electrical, and software workstreams.",
-        url: "https://sunmobility.com/",
-      },
-    ],
-    projects: [
-      {
-        name: "Symbol Robotics",
-        meta: "Humanoid mobile manipulation · early technical hire",
-        logo: "assets/logos/symbol-robotics.svg",
-        logoAlt: "Symbol Robotics",
-        description:
-          "Helped stand up software for a high–DoF humanoid mobile manipulator: baseline architecture, bring-up of core autonomy components, and tooling so the team could iterate quickly on whole-body behaviors.",
-        url: "https://www.symbolrobotics.com/",
-      },
-      {
-        name: "Undergraduate capstone — MIT World Peace University",
-        meta: "B.Tech Mechanical Engineering",
-        logo: "assets/logos/mit-wpu.svg",
-        logoAlt: "MIT World Peace University",
-        description:
-          "Applied mechanics and systems project tying coursework to a built prototype: design, analysis, fabrication, and validation — with emphasis on rigorous documentation and advisor milestones typical of a final-year capstone.",
-      },
-    ],
+    summary:
+      "I’ve previously worked at **Asteria Aerospace** (1 year) with 3 month internships at **Symbol Robotics**, **Defence Research and Development Organisation (DRDO)** and **SUN Mobility**. For more details, see **my resume** below.",
+    relatedEmbed: {
+      url: "assets/ShivamTripathy_Resume.pdf",
+      title: "Resume — Shivam Tripathy (PDF)",
+      fallbackLinkText: "open the PDF in a new tab",
+    },
   },
 };
 
@@ -358,8 +330,29 @@ function educationToHtml(e) {
       `
       : "";
 
+  const pq = e.cmuSpeech && e.cmuSpeech.professorQuote;
+  const pqText =
+    pq && pq.text != null ? String(pq.text).trim() : "";
+  const pqAttribution =
+    pq && pq.attribution != null ? String(pq.attribution).trim() : "";
+  const professorQuoteHtml =
+    pqText
+      ? `
+        <blockquote class="edu-speech__quote">
+          <p class="edu-speech__quote-text">${escapeHtml(pqText)}</p>
+          ${
+            pqAttribution
+              ? `<cite class="edu-speech__quote-attribution">${escapeHtml(
+                  pqAttribution
+                )}</cite>`
+              : ""
+          }
+        </blockquote>`
+      : "";
+
   const speech =
-    e.cmuSpeech && (e.cmuSpeech.body || e.cmuSpeech.videoId)
+    e.cmuSpeech &&
+    (e.cmuSpeech.body || e.cmuSpeech.videoId || pqText)
       ? `
       <details class="edu-speech" open>
         <summary>
@@ -368,6 +361,7 @@ function educationToHtml(e) {
           )}</span>
           <span class="edu-speech__summary-hint"></span>
         </summary>
+        ${professorQuoteHtml}
         ${
           e.cmuSpeech.body
             ? `<p class="edu-speech__body">${escapeHtml(e.cmuSpeech.body)}</p>`
@@ -387,44 +381,25 @@ function educationToHtml(e) {
     </li>`;
 }
 
-function highlightCardToHtml(item) {
-  const logo = item.logo
-    ? `<div class="highlight-card__logo-wrap"><img class="highlight-card__logo" src="${escapeHtml(
-        item.logo
-      )}" alt="${escapeHtml(item.logoAlt || "")}" width="200" height="56" loading="lazy" decoding="async" onerror="this.closest('.highlight-card__logo-wrap')?.remove()" /></div>`
-    : "";
-  const titleInner = escapeHtml(item.name || "");
-  const title = item.url
-    ? `<a class="highlight-card__title" href="${escapeHtml(
-        item.url
-      )}" target="_blank" rel="noopener noreferrer">${titleInner}</a>`
-    : `<span class="highlight-card__title">${titleInner}</span>`;
-  const metaRaw = item.meta != null ? String(item.meta).trim() : "";
-  const meta = metaRaw
-    ? `<p class="highlight-card__meta">${escapeHtml(metaRaw)}</p>`
-    : "";
-  const descRaw =
-    item.description != null ? String(item.description).trim() : "";
-  const desc = descRaw
-    ? `<p class="highlight-card__desc">${escapeHtml(descRaw)}</p>`
-    : "";
-  return `<li class="highlight-card">${logo}<div class="highlight-card__body">${title}${meta}${desc}</div></li>`;
-}
-
 function renderOtherHighlights() {
   const oh = SITE.otherHighlights;
-  if (!oh) return;
-  const internEl = document.getElementById("internships-list");
-  const projEl = document.getElementById("projects-list");
-  if (internEl) {
-    internEl.innerHTML = (oh.internships || [])
-      .map(highlightCardToHtml)
-      .join("");
+  const root = document.getElementById("resume-root");
+  if (!oh || !root) return;
+
+  root.replaceChildren();
+
+  const summaryRaw = oh.summary != null ? String(oh.summary).trim() : "";
+  if (summaryRaw) {
+    const p = document.createElement("p");
+    p.className = "other-highlights__summary";
+    p.innerHTML = formatInlineBoldHtml(summaryRaw);
+    root.appendChild(p);
   }
-  if (projEl) {
-    projEl.innerHTML = (oh.projects || [])
-      .map(highlightCardToHtml)
-      .join("");
+
+  const embed = oh.relatedEmbed;
+  if (embed && embed.url != null && String(embed.url).trim()) {
+    const embedEl = createRelatedEmbedElement(embed);
+    if (embedEl) root.appendChild(embedEl);
   }
 }
 
@@ -478,6 +453,67 @@ function escapeHtml(str) {
   const d = document.createElement("div");
   d.textContent = str;
   return d.innerHTML;
+}
+
+/** Trusted SITE copy: newlines → <br>, **...** → <strong>. */
+function formatInlineBoldHtml(raw) {
+  const parts = String(raw).split(/\*\*/);
+  return parts
+    .map((part, i) => {
+      const chunk = escapeHtml(part).replace(/\n/g, "<br>");
+      return i % 2 === 0 ? chunk : `<strong>${chunk}</strong>`;
+    })
+    .join("");
+}
+
+/**
+ * @param {{ url: string, title?: string, fallbackLinkText?: string }} config
+ */
+function createRelatedEmbedElement(config) {
+  const url = config.url != null ? String(config.url).trim() : "";
+  if (!url) return null;
+  const titleRaw = config.title != null ? String(config.title).trim() : "";
+  const title = titleRaw || url;
+  const fallbackLinkText =
+    config.fallbackLinkText != null && String(config.fallbackLinkText).trim()
+      ? String(config.fallbackLinkText).trim()
+      : "open in a new tab";
+
+  const embedWrap = document.createElement("div");
+  embedWrap.className = "related-embed";
+  const bar = document.createElement("div");
+  bar.className = "related-embed__bar";
+  const outLink = document.createElement("a");
+  outLink.className = "related-embed__link";
+  outLink.href = url;
+  outLink.target = "_blank";
+  outLink.rel = "noopener noreferrer";
+  outLink.textContent = title;
+  bar.appendChild(outLink);
+  embedWrap.appendChild(bar);
+  const frame = document.createElement("iframe");
+  frame.className = "related-embed__frame";
+  frame.src = url;
+  frame.title = title;
+  frame.loading = "lazy";
+  frame.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+  embedWrap.appendChild(frame);
+  const fallback = document.createElement("p");
+  fallback.className = "related-embed__fallback";
+  fallback.append(
+    document.createTextNode("If the page doesn’t load here, "),
+    (() => {
+      const a = document.createElement("a");
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = fallbackLinkText;
+      return a;
+    })(),
+    document.createTextNode(".")
+  );
+  embedWrap.appendChild(fallback);
+  return embedWrap;
 }
 
 function forEachShowcaseClip(fn) {
@@ -618,48 +654,24 @@ function buildShowcaseDOM() {
     titles.innerHTML = `
       <h3 class="showcase-group__org">${escapeHtml(group.org)}${orgWebsiteHtml}</h3>
       <p class="showcase-group__role">${escapeHtml(group.role)} · ${escapeHtml(group.dates)}</p>
-      ${group.summary ? `<p class="showcase-group__summary">${escapeHtml(group.summary)}</p>` : ""}
+      ${
+        group.summary
+          ? `<p class="showcase-group__summary">${formatInlineBoldHtml(
+              group.summary
+            )}</p>`
+          : ""
+      }
     `;
     head.appendChild(titles);
     section.appendChild(head);
 
     if (group.relatedEmbed && group.relatedEmbed.url) {
-      const embedWrap = document.createElement("div");
-      embedWrap.className = "related-embed";
-      const bar = document.createElement("div");
-      bar.className = "related-embed__bar";
-      const outLink = document.createElement("a");
-      outLink.className = "related-embed__link";
-      outLink.href = group.relatedEmbed.url;
-      outLink.target = "_blank";
-      outLink.rel = "noopener noreferrer";
-      outLink.textContent =
-        group.relatedEmbed.title || group.relatedEmbed.url;
-      bar.appendChild(outLink);
-      embedWrap.appendChild(bar);
-      const frame = document.createElement("iframe");
-      frame.className = "related-embed__frame";
-      frame.src = group.relatedEmbed.url;
-      frame.title = group.relatedEmbed.title || "CMU SCS News";
-      frame.loading = "lazy";
-      frame.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
-      embedWrap.appendChild(frame);
-      const fallback = document.createElement("p");
-      fallback.className = "related-embed__fallback";
-      fallback.append(
-        document.createTextNode("If the page doesn’t load here, "),
-        (() => {
-          const a = document.createElement("a");
-          a.href = group.relatedEmbed.url;
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-          a.textContent = "open the article on CMU SCS";
-          return a;
-        })(),
-        document.createTextNode(".")
-      );
-      embedWrap.appendChild(fallback);
-      section.appendChild(embedWrap);
+      const embedEl = createRelatedEmbedElement({
+        ...group.relatedEmbed,
+        fallbackLinkText:
+          group.relatedEmbed.fallbackLinkText || "open the article on CMU SCS",
+      });
+      if (embedEl) section.appendChild(embedEl);
     }
 
     const clipsRoot = document.createElement("div");
@@ -744,16 +756,60 @@ function buildShowcaseDOM() {
             ? String(rawLink.url).trim()
             : "";
         if (groupDesc || linkUrl) {
-          const descEl = document.createElement("p");
-          descEl.className = "clip-group__description";
+          const details = document.createElement("details");
+          details.className = "clip-group__details";
+          const summaryEl = document.createElement("summary");
+          summaryEl.className = "clip-group__details-summary";
+          const toggleLabel =
+            cg.descriptionToggleLabel != null &&
+            String(cg.descriptionToggleLabel).trim()
+              ? String(cg.descriptionToggleLabel).trim()
+              : "Context & role";
+
+          const textCol = document.createElement("span");
+          textCol.className = "clip-group__details-summary-text";
+
+          const labelSpan = document.createElement("span");
+          labelSpan.className = "clip-group__details-label";
+          labelSpan.textContent = toggleLabel;
+
+          const hintClosed = document.createElement("span");
+          hintClosed.className =
+            "clip-group__details-hint clip-group__details-hint--when-closed";
+          hintClosed.textContent = "Show full description";
+
+          const hintOpen = document.createElement("span");
+          hintOpen.className =
+            "clip-group__details-hint clip-group__details-hint--when-open";
+          hintOpen.textContent = "Hide";
+
+          textCol.appendChild(labelSpan);
+          textCol.appendChild(hintClosed);
+          textCol.appendChild(hintOpen);
+
+          const chevron = document.createElement("span");
+          chevron.className = "clip-group__details-chevron";
+          chevron.setAttribute("aria-hidden", "true");
+
+          summaryEl.appendChild(textCol);
+          summaryEl.appendChild(chevron);
+          details.appendChild(summaryEl);
+
+          const detailsBody = document.createElement("div");
+          detailsBody.className = "clip-group__details-body";
           if (groupDesc) {
-            descEl.appendChild(document.createTextNode(groupDesc));
+            const descEl = document.createElement("div");
+            descEl.className = "clip-group__description";
+            descEl.innerHTML = formatInlineBoldHtml(groupDesc);
+            detailsBody.appendChild(descEl);
           }
           if (linkUrl) {
+            const linkP = document.createElement("p");
+            linkP.className = "clip-group__description";
             const lead =
               rawLink && rawLink.lead != null ? String(rawLink.lead) : "";
             if (lead) {
-              descEl.appendChild(document.createTextNode(lead));
+              linkP.appendChild(document.createTextNode(lead));
             }
             const a = document.createElement("a");
             a.className = "clip-group__description-link";
@@ -772,9 +828,11 @@ function buildShowcaseDOM() {
               }
             }
             a.textContent = label;
-            descEl.appendChild(a);
+            linkP.appendChild(a);
+            detailsBody.appendChild(linkP);
           }
-          wrap.appendChild(descEl);
+          details.appendChild(detailsBody);
+          wrap.appendChild(details);
         }
         const inner = document.createElement("div");
         inner.className = "clip-group__clips";
@@ -820,10 +878,163 @@ function observeVideos() {
   blocks.forEach((b) => io.observe(b));
 }
 
+function initProjectsCarousel() {
+  const root = document.querySelector("[data-projects-carousel]");
+  if (!root) return;
+
+  const live = root.querySelector(".projects-carousel__live");
+  const status = root.querySelector("[data-projects-status]");
+  const btnPrev = root.querySelector(".projects-carousel__btn--prev");
+  const btnNext = root.querySelector(".projects-carousel__btn--next");
+  const slides = [...root.querySelectorAll(".projects-carousel__slide")];
+  if (!btnPrev || !btnNext || slides.length === 0) return;
+
+  const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const transitionMs = () => (motionMq.matches ? 0 : 560);
+  const autoAdvanceMs = 10000;
+
+  if (slides.length === 1) {
+    btnPrev.hidden = true;
+    btnNext.hidden = true;
+    slides[0].classList.add("is-active");
+    return;
+  }
+
+  let index = slides.findIndex((slide) => slide.classList.contains("is-active"));
+  if (index < 0) index = 0;
+  let animating = false;
+  let autoTimer = 0;
+
+  function announce(titleEl) {
+    if (!live || !titleEl) return;
+    const t = titleEl.textContent.replace(/\s+/g, " ").trim();
+    live.textContent = t ? `Showing: ${t}` : "";
+  }
+
+  function setLinkState(slide, isActive) {
+    const link = slide.querySelector(".project-slide__github");
+    if (!link) return;
+    if (isActive) {
+      link.removeAttribute("tabindex");
+      slide.removeAttribute("aria-hidden");
+    } else {
+      link.setAttribute("tabindex", "-1");
+      slide.setAttribute("aria-hidden", "true");
+    }
+  }
+
+  function resetSlide(slide) {
+    slide.classList.remove(
+      "is-active",
+      "is-entering-from-right",
+      "is-entering-from-left",
+      "is-leaving-to-left",
+      "is-leaving-to-right"
+    );
+  }
+
+  function renderStatic() {
+    slides.forEach((slide, i) => {
+      resetSlide(slide);
+      if (i === index) {
+        slide.classList.add("is-active");
+        setLinkState(slide, true);
+        announce(slide.querySelector(".project-slide__title"));
+      } else {
+        setLinkState(slide, false);
+      }
+    });
+    if (status) status.textContent = `${index + 1} / ${slides.length}`;
+  }
+
+  function clearAutoAdvance() {
+    window.clearTimeout(autoTimer);
+  }
+
+  function scheduleAutoAdvance() {
+    clearAutoAdvance();
+    autoTimer = window.setTimeout(() => {
+      go(1);
+    }, autoAdvanceMs);
+  }
+
+  function finishTransition(fromSlide) {
+    resetSlide(fromSlide);
+    setLinkState(fromSlide, false);
+    animating = false;
+    renderStatic();
+    scheduleAutoAdvance();
+  }
+
+  function go(delta) {
+    if (animating) return;
+
+    clearAutoAdvance();
+    const prevIndex = index;
+    const nextIndex = (index + delta + slides.length) % slides.length;
+    if (prevIndex === nextIndex) {
+      scheduleAutoAdvance();
+      return;
+    }
+
+    const fromSlide = slides[prevIndex];
+    const toSlide = slides[nextIndex];
+    const enteringClass =
+      delta > 0 ? "is-entering-from-right" : "is-entering-from-left";
+    const leavingClass =
+      delta > 0 ? "is-leaving-to-left" : "is-leaving-to-right";
+
+    animating = true;
+    index = nextIndex;
+
+    slides.forEach((slide, i) => {
+      resetSlide(slide);
+      setLinkState(slide, i === nextIndex);
+    });
+
+    fromSlide.classList.add("is-active");
+    toSlide.classList.add(enteringClass);
+    setLinkState(fromSlide, false);
+    setLinkState(toSlide, true);
+
+    const complete = () => finishTransition(fromSlide);
+    if (transitionMs() === 0) {
+      complete();
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        fromSlide.classList.remove("is-active");
+        fromSlide.classList.add(leavingClass);
+        toSlide.classList.remove(enteringClass);
+        toSlide.classList.add("is-active");
+      });
+    });
+
+    window.setTimeout(complete, transitionMs() + 40);
+  }
+
+  btnPrev.addEventListener("click", () => go(-1));
+  btnNext.addEventListener("click", () => go(1));
+  root.addEventListener("mouseenter", clearAutoAdvance);
+  root.addEventListener("mouseleave", scheduleAutoAdvance);
+  root.addEventListener("focusin", clearAutoAdvance);
+  root.addEventListener("focusout", () => {
+    window.setTimeout(() => {
+      if (!root.contains(document.activeElement)) scheduleAutoAdvance();
+    }, 0);
+  });
+
+  renderStatic();
+  scheduleAutoAdvance();
+}
+
 renderLists();
 renderOtherHighlights();
 initEducationSpeechEmbeds();
 buildShowcaseDOM();
+initProjectsCarousel();
 document.getElementById("year").textContent = String(new Date().getFullYear());
 
 if (countValidYoutubeClips() > 0) {

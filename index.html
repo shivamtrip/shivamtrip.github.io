@@ -20,17 +20,12 @@
     <header class="site-header">
       <a class="logo" href="#top">Shivam Tripathy</a>
       <nav class="nav" aria-label="Primary">
-        <a href="#work">Experience</a>
-        <a href="#other-highlights">Other</a>
-        <a href="#skills">Skills</a>
         <a href="#education">Education</a>
+        <a href="#work">Highlights</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
         <a href="#achievements">Achievements</a>
-        <a
-          href="assets/ShivamTripathy_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Resume</a
-        >
+        <a href="#skills">Skills</a>
       </nav>
     </header>
 
@@ -42,8 +37,8 @@
               class="hero__photo"
               src="assets/logos/Profile_ShivamTripathy.jpg"
               alt="Portrait of Shivam Tripathy"
-              width="480"
-              height="480"
+              width="300"
+              height="300"
               onerror="this.onerror=null;this.classList.add('hero__photo--fallback');this.removeAttribute('src');this.alt=''"
             />
           </picture>
@@ -53,34 +48,93 @@
           <h1 id="hero-heading" class="hero__name">Shivam Tripathy</h1>
           <p class="hero__role">Robotics Software Engineer</p>
           <div class="hero__bio">
-            <p>
-              I build and deploy real-world robotic systems: autonomy, perception,
-              and control for UAVs, humanoids, and mobile manipulators. My
-              background spans SLAM and state estimation, motion planning,
-              learning-based control, and LLM-linked task planning — from defense
-              and aerial platforms to assistive care robots in the field.
+            <p class="hero-bio__lead">
+              I approach <strong>Robotics</strong> problems with a
+              <strong>Product</strong> and <strong>Systems Engineering</strong>
+              mindset. I want to solve problems that directly add value to people.
             </p>
+            <details class="hero-bio__tech">
+              <summary class="hero-bio__tech-summary">
+                <span
+                  class="hero-bio__tech-link hero-bio__tech-link--when-closed"
+                  >Click to expand technical background</span
+                >
+                <span class="hero-bio__tech-link hero-bio__tech-link--when-open"
+                  >Click to hide technical background</span
+                >
+              </summary>
+              <div class="hero-bio__tech-body">
+                <p class="clip-group__description">
+                  I build and deploy real-world robotic systems: autonomy, perception,
+                  and control for UAVs, humanoids, and mobile manipulators. My
+                  background spans SLAM and state estimation, motion planning,
+                  learning-based control, and LLM-linked task planning — from defense
+                  and aerial platforms to assistive care robots in the field.
+                </p>
+              </div>
+            </details>
           </div>
           <div class="hero__actions">
-            <a
-              class="button button--ghost"
-              href="mailto:shivamtrip99@gmail.com"
-              >Email</a
-            >
-            <a
-              class="button button--ghost"
-              href="https://www.linkedin.com/in/shivamtripathy"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-            <a
-              class="button button--ghost"
-              href="https://github.com/shivamtrip"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
+            <nav class="hero__social" aria-label="Contact and profiles">
+              <a
+                class="hero__icon-link"
+                href="mailto:shivamtrip99@gmail.com"
+                aria-label="Email Shivam Tripathy"
+              >
+                <svg
+                  class="hero__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </a>
+              <a
+                class="hero__icon-link"
+                href="https://www.linkedin.com/in/shivamtripathy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Shivam Tripathy on LinkedIn"
+              >
+                <svg
+                  class="hero__icon hero__icon--linkedin"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="hero__icon-link"
+                href="https://github.com/shivamtrip"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Shivam Tripathy on GitHub"
+              >
+                <svg
+                  class="hero__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+            </nav>
           </div>
         </div>
       </section>
@@ -99,37 +153,219 @@
           <header class="section__header">
             <h2 id="work-heading" class="section__title">Work Highlights</h2>
             <p class="section__lede">
-              I was the sole / major contributor to the projects below.
+              I was the sole / major technical contributor to the projects below (1 - 3 member teams)
             </p>
           </header>
           <div class="video-stack" id="video-stack"></div>
         </div>
       </section>
 
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <div class="section__inner">
+          <header class="section__header">
+            <h2 id="projects-heading" class="section__title">Projects</h2>
+          </header>
+          <div
+            class="projects-carousel"
+            data-projects-carousel
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Selected projects"
+          >
+            <p
+              class="projects-carousel__live visually-hidden"
+              aria-live="polite"
+              aria-atomic="true"
+            ></p>
+            <div class="projects-carousel__frame">
+              <div class="projects-carousel__viewport">
+                <div class="projects-carousel__track">
+                  <article class="projects-carousel__slide is-active">
+                    <div class="project-slide__media">
+                      <img
+                        class="project-slide__img"
+                        src="assets/logos/mpc.gif"
+                        alt=""
+                        width="640"
+                        height="360"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-slide__body">
+                      <h3 class="project-slide__title">
+                        MPC with a Quadrotor to track a moving subject while avoiding a
+                        moving obstacle
+                      </h3>
+                      <p class="project-slide__desc">
+                        Implemented Model Predictive Control to enable a drone (BLUE) to
+                        track a moving subject (YELLOW) while avoiding a moving obstacle
+                        (RED) using Potential Field Theory. Additional criteria involved
+                        tracking the subject from a specified relative angle while also
+                        maintaining a desired range from subject.
+                      </p>
+                      <p class="project-slide__meta">
+                        <a
+                          class="project-slide__github"
+                          href="https://github.com/shivamtrip/mpc-drone-tracking"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >GitHub</a
+                        >
+                      </p>
+                    </div>
+                  </article>
+                  <article class="projects-carousel__slide">
+                    <div class="project-slide__media">
+                      <img
+                        class="project-slide__img"
+                        src="assets/logos/rrt-star.gif"
+                        alt=""
+                        width="640"
+                        height="360"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-slide__body">
+                      <h3 class="project-slide__title">
+                        RRT-Star Planner to Manipulate Objects in Gazebo
+                      </h3>
+                      <p class="project-slide__desc">
+                        Implemented RRT-Star in C++ to plan a path towards an object grasp
+                        location in ROS Gazebo with a 6-DOF robotic arm.
+                      </p>
+                      <p class="project-slide__meta">
+                        <a
+                          class="project-slide__github"
+                          href="https://github.com/shivamtrip/robot-manipulation-with-rrt_star"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >GitHub</a
+                        >
+                      </p>
+                    </div>
+                  </article>
+                  <article class="projects-carousel__slide">
+                    <div class="project-slide__media">
+                      <img
+                        class="project-slide__img"
+                        src="assets/logos/sandwich-bot.gif"
+                        alt=""
+                        width="640"
+                        height="360"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-slide__body">
+                      <h3 class="project-slide__title">Sandwich Bot</h3>
+                      <p class="project-slide__desc">
+                        I used an Azure Kinect RGBD camera and Franka Emika robot arm
+                        to detect toy sandwich ingredients and then manipulate them in
+                        order to make a toy sandwich.
+                      </p>
+                      <p class="project-slide__meta">
+                        <a
+                          class="project-slide__github"
+                          href="https://github.com/shivamtrip/sandwich-bot"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >GitHub</a
+                        >
+                      </p>
+                    </div>
+                  </article>
+                  <article class="projects-carousel__slide">
+                    <div class="project-slide__media">
+                      <img
+                        class="project-slide__img"
+                        src="assets/logos/spacecraft-rendezvous.gif"
+                        alt=""
+                        width="640"
+                        height="360"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-slide__body">
+                      <h3 class="project-slide__title">
+                        MPC for Optimal Rendezvous and Docking of a Spacecraft
+                      </h3>
+                      <p class="project-slide__desc">
+                        Implemented Model Predictive Control (MPC) to optimally
+                        rendezvous and dock a spacecraft of given dynamics with the
+                        ISS.
+                      </p>
+                      <p class="project-slide__meta">
+                        <a
+                          class="project-slide__github"
+                          href="https://github.com/shivamtrip/robot-control"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >GitHub</a
+                        >
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <button
+                  type="button"
+                  class="projects-carousel__btn projects-carousel__btn--prev"
+                  aria-label="Previous project"
+                >
+                  <svg
+                    class="projects-carousel__chevron"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m15 18-6-6 6-6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="projects-carousel__btn projects-carousel__btn--next"
+                  aria-label="Next project"
+                >
+                  <svg
+                    class="projects-carousel__chevron"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="projects-carousel__status" data-projects-status aria-hidden="true">
+              1 / 4
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section
         class="section section--alt"
-        id="other-highlights"
-        aria-labelledby="other-highlights-heading"
+        id="resume"
+        aria-labelledby="resume-heading"
       >
         <div class="section__inner">
           <header class="section__header">
-            <h2 id="other-highlights-heading" class="section__title">
-              Other Highlights
-            </h2>
-            <p class="section__lede">
-              Earlier internships and standalone projects — quick context on each.
-            </p>
+            <h2 id="resume-heading" class="section__title">Resume</h2>
           </header>
-          <div class="highlights-split">
-            <div class="highlights-subsection">
-              <h3 class="highlights-subsection__title">Internships</h3>
-              <ul class="highlight-cards" id="internships-list"></ul>
-            </div>
-            <div class="highlights-subsection">
-              <h3 class="highlights-subsection__title">Projects</h3>
-              <ul class="highlight-cards" id="projects-list"></ul>
-            </div>
-          </div>
+          <div class="other-highlights__content" id="resume-root"></div>
         </div>
       </section>
 
