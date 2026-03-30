@@ -87,7 +87,8 @@ const SITE = {
       logoAlt: "Apellix",
       companyUrl: "https://apellix.com",
       summary:
-        "Developing autonomous **power-wash** and **spray-painting drones** deployed commercially and for the US Army. \n **Focus:** visual localization/SLAM, flight software, and ground control software.",
+        "Developing autonomous **power-wash** and **spray-painting drones** deployed commercially and for the US Army. \n **Focus:** visual localization/SLAM, flight software, and ground control software. \n **Impact:** UAV platform now operating in 20+ countries; directly contributed to $5M+ in revenue and $15M+ in active contract discussions."
+      ,
       clipGroups: [
         {
           heading: "Project 1: Autonomous decontamination of military vehicles (Aug 2025 - Present)",
@@ -158,6 +159,7 @@ const SITE = {
           clips: [
             {
               youtube: "https://youtu.be/nZRy5b-qqSc?si=Oun14xAvIXUPpHgk",
+              startSeconds: 20,
               description: "Autonomous drone cleaning with Apellix Intelligence (1 of 2).",
             },
             {
