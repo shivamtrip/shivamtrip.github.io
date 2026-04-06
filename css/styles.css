@@ -645,6 +645,76 @@ code {
   white-space: pre-line;
 }
 
+.promo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin: 0 0 1.1rem;
+}
+
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 300px;
+  max-width: 100%;
+}
+
+.promo-card__image-link {
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.promo-card__image-box {
+  width: 260px;
+  height: 520px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(26, 25, 24, 0.06);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.promo-card__image-box--static {
+  cursor: default;
+}
+
+.promo-card__image-link:hover .promo-card__image-box {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(26, 25, 24, 0.1);
+}
+
+.promo-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.promo-card__link {
+  width: fit-content;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.promo-card__link:hover {
+  text-decoration: underline;
+}
+
+.promo-card__note {
+  margin: 0;
+  max-width: 260px;
+  color: var(--text-muted);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 .related-embed {
   width: 100%;
   margin: 0 0 1rem;

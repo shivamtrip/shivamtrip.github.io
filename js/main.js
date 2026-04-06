@@ -197,6 +197,27 @@ const SITE = {
         },
       ],
     },
+    {
+      org: "GigZag - Social Music Events Platform",
+      role: "Founder",
+      dates: "Present",
+      summary:
+        "Currently growing a social music events app that I **created for the large, vibrant music community** in Jacksonville, Florida. The aim is to provide a platform for artists to promote their open mics and gigs. The platform allows users to view events around town, RSVP to them, keep track of their event history, follow their favorite local artists to know when and where they are performing, and maintain a social music profile that builds credibility on the platform. \n\n **Currently on the App Stores (iOS / Android)**",
+      promoCards: [
+        {
+          imageSrc: "assets/logos/gigzag_ios.jpeg",
+          imageAlt: "GigZag App Store listing on iOS",
+          linkUrl: "https://apps.apple.com/us/app/gigzag/id6759212819",
+          linkText: "Get it on the App Store (iOS)",
+        },
+        {
+          imageSrc: "assets/logos/gigzag_android.jpeg",
+          imageAlt: "GigZag Google Play listing on Android",
+          noteText: "Android app currently in beta (launching soon!)",
+        }
+      ],
+      clips: [],
+    },
   ],
   /**
    * summary: **phrase** → bold. relatedEmbed: same shape as showcase (iframe + fallback link).
@@ -518,6 +539,67 @@ function createRelatedEmbedElement(config) {
   return embedWrap;
 }
 
+/**
+ * @param {{ imageSrc: string, imageAlt?: string, linkUrl?: string, linkText?: string, noteText?: string }} config
+ */
+function createPromoCardElement(config) {
+  const imageSrc =
+    config.imageSrc != null ? String(config.imageSrc).trim() : "";
+  const linkUrl = config.linkUrl != null ? String(config.linkUrl).trim() : "";
+  if (!imageSrc) return null;
+
+  const card = document.createElement("div");
+  card.className = "promo-card";
+
+  const imageBox = document.createElement("div");
+  imageBox.className = "promo-card__image-box";
+
+  const img = document.createElement("img");
+  img.className = "promo-card__image";
+  img.src = imageSrc;
+  img.alt =
+    config.imageAlt != null && String(config.imageAlt).trim()
+      ? String(config.imageAlt).trim()
+      : "";
+  img.loading = "lazy";
+  img.decoding = "async";
+
+  imageBox.appendChild(img);
+
+  if (linkUrl) {
+    const imageLink = document.createElement("a");
+    imageLink.className = "promo-card__image-link";
+    imageLink.href = linkUrl;
+    imageLink.target = "_blank";
+    imageLink.rel = "noopener noreferrer";
+    imageLink.appendChild(imageBox);
+    card.appendChild(imageLink);
+
+    const cta = document.createElement("a");
+    cta.className = "promo-card__link";
+    cta.href = linkUrl;
+    cta.target = "_blank";
+    cta.rel = "noopener noreferrer";
+    cta.textContent =
+      config.linkText != null && String(config.linkText).trim()
+        ? String(config.linkText).trim()
+        : linkUrl;
+    card.appendChild(cta);
+  } else {
+    imageBox.classList.add("promo-card__image-box--static");
+    card.appendChild(imageBox);
+  }
+
+  if (config.noteText != null && String(config.noteText).trim()) {
+    const note = document.createElement("p");
+    note.className = "promo-card__note";
+    note.textContent = String(config.noteText).trim();
+    card.appendChild(note);
+  }
+
+  return card;
+}
+
 function forEachShowcaseClip(fn) {
   SITE.showcase.forEach((g) => {
     if (g.clipGroups && g.clipGroups.length) {
@@ -666,6 +748,16 @@ function buildShowcaseDOM() {
     `;
     head.appendChild(titles);
     section.appendChild(head);
+
+    if (group.promoCards && group.promoCards.length) {
+      const promoRow = document.createElement("div");
+      promoRow.className = "promo-cards";
+      group.promoCards.forEach((promoCard) => {
+        const promoEl = createPromoCardElement(promoCard);
+        if (promoEl) promoRow.appendChild(promoEl);
+      });
+      if (promoRow.childElementCount) section.appendChild(promoRow);
+    }
 
     if (group.relatedEmbed && group.relatedEmbed.url) {
       const embedEl = createRelatedEmbedElement({
